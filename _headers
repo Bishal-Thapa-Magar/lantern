@@ -1,0 +1,21 @@
+# Security headers for hosts that support a _headers file (Cloudflare Pages, Netlify).
+# GitHub Pages cannot send custom headers, so index.html also carries the CSP in a <meta> tag.
+# If you move to Cloudflare Pages or Netlify (both free), this gives you the full set, including
+# frame-ancestors (clickjacking protection), which a <meta> CSP cannot provide.
+#
+# Self-hosting Supabase? Replace https://*.supabase.co in connect-src with your own API URL.
+
+/*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https://covers.openlibrary.org https://archive.org https://*.archive.org https://www.gutenberg.org; connect-src 'self' https://openlibrary.org https://gutendex.com https://archive.org https://en.wikiversity.org https://en.wikibooks.org https://*.supabase.co; manifest-src 'self'; worker-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+/sw.js
+  Cache-Control: no-cache
+
+/config.js
+  Cache-Control: no-cache

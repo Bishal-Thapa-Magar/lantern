@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Content-Security-Policy: only this site's own scripts and styles run. Edit connect-src if you self-host Supabase. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https://covers.openlibrary.org https://archive.org https://*.archive.org https://www.gutenberg.org; connect-src 'self' https://openlibrary.org https://gutendex.com https://archive.org https://en.wikiversity.org https://en.wikibooks.org https://*.supabase.co; manifest-src 'self'; worker-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f6fa">
+  <meta name="description" content="Lantern finds free and low-cost courses, ebooks, PDFs, audio and videos, shows how effective they are, and tells you if they come with a certificate.">
+  <title>Lantern: free and low-cost learning</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <script src="js/theme-init.js"></script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#/" aria-label="Lantern home">
+        <svg class="brand__mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <path class="brand__frame" d="M11 5h10M12 5v2h8V5M9 9h14l1.5 15a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="brand__flame" d="M16 21c-2.2-1.2-3-3-2-5 .6-1.2 1.6-1.8 2-3.2 1.8 1.4 4 3.2 4 5.4 0 1.6-1.4 2.8-4 2.8z"/>
+        </svg>
+        <span class="brand__name">Lantern</span>
+      </a>
+
+      <nav class="topnav" aria-label="Main">
+        <a href="#/" data-nav="home">Discover</a>
+        <a href="#/library" data-nav="library">My library</a>
+        <a href="#/about" data-nav="about">How it works</a>
+      </nav>
+
+      <div class="topbar__tools">
+        <button class="iconbtn" id="themeBtn" type="button"></button>
+        <button class="iconbtn" id="settingsBtn" type="button" aria-label="Settings"></button>
+        <button class="btn btn--small" id="accountBtn" type="button">Sign in</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>Lantern is free and open source. Listings can change, so check the price and certificate on the provider's page before you start.</p>
+      <p><a href="#/about">How we score</a> · <a id="feedbackLink" rel="noopener noreferrer" target="_blank" href="#">Report a mistake or suggest a resource</a></p>
+    </div>
+  </footer>
+
+  <nav class="tabbar" aria-label="Main (mobile)">
+    <a href="#/" data-nav="home"><span data-icon="home"></span>Discover</a>
+    <a href="#/search" data-nav="search"><span data-icon="search"></span>Search</a>
+    <a href="#/library" data-nav="library"><span data-icon="bookmark"></span>Library</a>
+    <a href="#/about" data-nav="about"><span data-icon="info"></span>About</a>
+  </nav>
+
+  <div id="toasts" role="status" aria-live="polite"></div>
+  <dialog id="dialog" class="dialog" aria-labelledby="dialogTitle"></dialog>
+
+  <noscript><p class="noscript">Lantern needs JavaScript to search and save resources. Please turn it on in your browser settings.</p></noscript>
+</body>
+</html>
